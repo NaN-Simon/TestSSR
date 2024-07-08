@@ -1,0 +1,25 @@
+---
+import "@/styles/globals.css";
+import i18next, { t, changeLanguage } from "i18next";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header";
+import Test from "@/components/Test";
+import MnogoTexta from "@/components/MnogoTexta";
+changeLanguage("en");
+
+const supportedLanguages = i18next.languages;
+const currentLanguage = i18next.language;
+---
+
+<Layout title="title">
+  <main
+    class="font-poppins font-bold bg-slate-200 dark:bg-slate-900 min-h-[100vh]"
+  >
+    <Header client:load />
+    <div class="pt-20"></div>
+
+    <Test client:load />
+
+    <MnogoTexta />
+  </main>
+</Layout>

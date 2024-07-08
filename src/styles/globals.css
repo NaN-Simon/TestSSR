@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+  background: #ffffff;
+  background-size: 224px;
+}
+
+  @font-face {
+    font-family: 'Unbounded';
+    src: url('/fonts/Unbounded.ttf') format('TrueType');
+    font-style: normal; 
+    font-weight: normal; 
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Bold.ttf') format('TrueType');
+    font-style: normal; 
+    font-weight: bold; 
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Light.ttf') format('TrueType');
+    font-style: normal; 
+    font-weight: 300; 
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Medium.ttf') format('TrueType');
+    font-style: normal; 
+    font-weight: 500; 
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.ttf') format('TrueType');
+    font-style: normal; 
+    font-weight: normal; 
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Thin.ttf') format('TrueType');
+    font-style: normal; 
+    font-weight: 100; 
+  }

@@ -1,0 +1,35 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import Layout from "./Layout.astro";
+import Header from "@/components/Header.astro";
+import HeaderReact from "@/components/HeaderReact";
+const currentLanguage = i18next.language;
+---
+
+<Layout title={Astro.props.frontmatter.title}>
+  <HeaderReact lang={currentLanguage} client:load />
+  <article
+    class="prose lg:prose-xl pt-20 mx-auto max-w-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]"
+  >
+    <a
+      href="/"
+      style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"
+    >
+      <img src="/svg/back.svg" alt="translate" />
+      <span>Back</span>
+    </a>
+    <slot />
+  </article>
+</Layout>
+
+<style is:global>
+  h2 {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+</style>
